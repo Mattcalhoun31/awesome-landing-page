@@ -1,0 +1,286 @@
+/**
+ * SYMMETRI BRAND COLORS
+ *
+ * This stylesheet contains all official Symmetri brand colors
+ * Use these CSS variables for consistent brand application
+ *
+ * @see /BRAND_GUIDE.md for complete usage guidelines
+ */
+
+:root {
+  /* ========================================
+     PRIMARY BRAND COLORS
+     ======================================== */
+
+  --symmetri-red: #E1331A;
+  --symmetri-red-rgb: 225, 51, 26;
+
+  --symmetri-magenta: #E4002A;
+  --symmetri-magenta-rgb: 228, 0, 42;
+
+  --symmetri-orange: #F37920;
+  --symmetri-orange-rgb: 243, 121, 32;
+
+  --symmetri-yellow-warm: #FFB200;
+  --symmetri-yellow-warm-rgb: 255, 178, 0;
+
+  --symmetri-yellow: #FFB400;
+  --symmetri-yellow-rgb: 255, 180, 0;
+
+  /* ========================================
+     NEUTRAL COLORS
+     ======================================== */
+
+  --symmetri-black: #000000;
+  --symmetri-black-rgb: 0, 0, 0;
+
+  --symmetri-dark-gray: #6B6A6C;
+  --symmetri-dark-gray-rgb: 107, 106, 108;
+
+  --symmetri-medium-gray: #979797;
+  --symmetri-medium-gray-rgb: 151, 151, 151;
+
+  --symmetri-light-gray: #D8D9D7;
+  --symmetri-light-gray-rgb: 216, 217, 215;
+
+  --symmetri-white: #FFFFFF;
+  --symmetri-white-rgb: 255, 255, 255;
+
+  /* ========================================
+     TYPOGRAPHY COLORS
+     ======================================== */
+
+  --symmetri-text-primary: #000000;
+  --symmetri-text-secondary: #5D5E60;
+  --symmetri-text-tertiary: #979797;
+  --symmetri-text-inverse: #FFFFFF;
+
+  --symmetri-text-link: #E4002A;
+  --symmetri-text-link-hover: #E1331A;
+
+  --symmetri-text-highlight: #FFB400;
+
+  /* ========================================
+     SEMANTIC COLORS (UI States)
+     ======================================== */
+
+  --symmetri-error: #E1331A;
+  --symmetri-warning: #FFB200;
+  --symmetri-success: #00A86B; /* Not in original guide, suggested */
+  --symmetri-info: #5D5E60;
+
+  /* ========================================
+     BACKGROUND COLORS
+     ======================================== */
+
+  --symmetri-bg-primary: #FFFFFF;
+  --symmetri-bg-secondary: #D8D9D7;
+  --symmetri-bg-dark: #000000;
+  --symmetri-bg-overlay: rgba(0, 0, 0, 0.8);
+
+  /* ========================================
+     GRADIENT DEFINITIONS
+     ======================================== */
+
+  --symmetri-gradient-primary: linear-gradient(135deg, #FFB400 0%, #F37920 50%, #E4002A 100%);
+  --symmetri-gradient-warm: linear-gradient(135deg, #FFB400 0%, #FFB200 50%, #F37920 100%);
+  --symmetri-gradient-bold: linear-gradient(135deg, #E1331A 0%, #E4002A 100%);
+
+  /* ========================================
+     SHADOW & EFFECTS
+     ======================================== */
+
+  --symmetri-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --symmetri-shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+  --symmetri-shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+  --symmetri-shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.18);
+
+  --symmetri-shadow-colored: 0 4px 12px rgba(228, 0, 42, 0.25);
+
+  /* ========================================
+     BORDERS
+     ======================================== */
+
+  --symmetri-border-color: #D8D9D7;
+  --symmetri-border-color-dark: #6B6A6C;
+  --symmetri-border-width: 1px;
+  --symmetri-border-radius: 4px;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Background Colors */
+.bg-symmetri-red { background-color: var(--symmetri-red); }
+.bg-symmetri-magenta { background-color: var(--symmetri-magenta); }
+.bg-symmetri-orange { background-color: var(--symmetri-orange); }
+.bg-symmetri-yellow { background-color: var(--symmetri-yellow); }
+.bg-symmetri-yellow-warm { background-color: var(--symmetri-yellow-warm); }
+.bg-symmetri-black { background-color: var(--symmetri-black); }
+.bg-symmetri-dark-gray { background-color: var(--symmetri-dark-gray); }
+.bg-symmetri-medium-gray { background-color: var(--symmetri-medium-gray); }
+.bg-symmetri-light-gray { background-color: var(--symmetri-light-gray); }
+.bg-symmetri-white { background-color: var(--symmetri-white); }
+
+/* Text Colors */
+.text-symmetri-red { color: var(--symmetri-red); }
+.text-symmetri-magenta { color: var(--symmetri-magenta); }
+.text-symmetri-orange { color: var(--symmetri-orange); }
+.text-symmetri-yellow { color: var(--symmetri-yellow); }
+.text-symmetri-yellow-warm { color: var(--symmetri-yellow-warm); }
+.text-symmetri-black { color: var(--symmetri-black); }
+.text-symmetri-gray { color: var(--symmetri-dark-gray); }
+.text-symmetri-white { color: var(--symmetri-white); }
+
+/* Gradient Backgrounds */
+.bg-gradient-symmetri-primary {
+  background: var(--symmetri-gradient-primary);
+}
+
+.bg-gradient-symmetri-warm {
+  background: var(--symmetri-gradient-warm);
+}
+
+.bg-gradient-symmetri-bold {
+  background: var(--symmetri-gradient-bold);
+}
+
+/* Border Colors */
+.border-symmetri-red { border-color: var(--symmetri-red); }
+.border-symmetri-magenta { border-color: var(--symmetri-magenta); }
+.border-symmetri-gray { border-color: var(--symmetri-border-color); }
+
+/* ========================================
+   COMPONENT EXAMPLES
+   ======================================== */
+
+/* Button Styles */
+.btn-symmetri-primary {
+  background-color: var(--symmetri-red);
+  color: var(--symmetri-white);
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: var(--symmetri-border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-symmetri-primary:hover {
+  background-color: var(--symmetri-magenta);
+  box-shadow: var(--symmetri-shadow-colored);
+  transform: translateY(-2px);
+}
+
+.btn-symmetri-secondary {
+  background: var(--symmetri-gradient-primary);
+  color: var(--symmetri-white);
+  border: none;
+  padding: 12px 24px;
+  font-weight: bold;
+  border-radius: var(--symmetri-border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-symmetri-outline {
+  background-color: transparent;
+  color: var(--symmetri-red);
+  border: 2px solid var(--symmetri-red);
+  padding: 10px 22px;
+  font-weight: bold;
+  border-radius: var(--symmetri-border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-symmetri-outline:hover {
+  background-color: var(--symmetri-red);
+  color: var(--symmetri-white);
+}
+
+/* Card Styles */
+.card-symmetri {
+  background-color: var(--symmetri-white);
+  border: var(--symmetri-border-width) solid var(--symmetri-border-color);
+  border-radius: var(--symmetri-border-radius);
+  box-shadow: var(--symmetri-shadow-md);
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card-symmetri:hover {
+  box-shadow: var(--symmetri-shadow-lg);
+  transform: translateY(-4px);
+}
+
+/* Alert/Banner Styles */
+.alert-symmetri {
+  padding: 16px 24px;
+  border-radius: var(--symmetri-border-radius);
+  font-weight: 500;
+}
+
+.alert-symmetri-error {
+  background-color: rgba(225, 51, 26, 0.1);
+  border-left: 4px solid var(--symmetri-error);
+  color: var(--symmetri-error);
+}
+
+.alert-symmetri-warning {
+  background-color: rgba(255, 178, 0, 0.1);
+  border-left: 4px solid var(--symmetri-warning);
+  color: #B38600;
+}
+
+/* ========================================
+   ACCESSIBILITY HELPERS
+   ======================================== */
+
+/* Ensure proper contrast for interactive elements */
+.symmetri-focus:focus {
+  outline: 3px solid var(--symmetri-yellow);
+  outline-offset: 2px;
+}
+
+/* Screen reader only text */
+.sr-only-symmetri {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ========================================
+   DARK MODE SUPPORT (Optional)
+   ======================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --symmetri-bg-primary: #000000;
+    --symmetri-bg-secondary: #1a1a1a;
+    --symmetri-text-primary: #FFFFFF;
+    --symmetri-text-secondary: #D8D9D7;
+    --symmetri-border-color: #6B6A6C;
+  }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+
+@media print {
+  .bg-symmetri-red,
+  .bg-symmetri-magenta,
+  .bg-symmetri-orange {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+  }
+}

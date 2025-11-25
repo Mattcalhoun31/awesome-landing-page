@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symmetri Brand Reference</title>
+    <link rel="stylesheet" href="colors/symmetri-colors.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--symmetri-text-primary);
+            background-color: var(--symmetri-bg-primary);
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-top: 60px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--symmetri-red);
+        }
+
+        h3 {
+            font-size: 24px;
+            margin-top: 40px;
+        }
+
+        .brand-intro {
+            background: var(--symmetri-gradient-primary);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 8px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .brand-intro h1 {
+            font-size: 56px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .brand-intro p {
+            font-size: 18px;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Color Swatches */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .color-swatch {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--symmetri-shadow-md);
+            transition: transform 0.3s ease;
+        }
+
+        .color-swatch:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--symmetri-shadow-lg);
+        }
+
+        .color-box {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .color-info {
+            background: white;
+            padding: 15px;
+            border-top: 3px solid var(--symmetri-medium-gray);
+        }
+
+        .color-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: var(--symmetri-text-primary);
+        }
+
+        .color-hex {
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            color: var(--symmetri-text-secondary);
+        }
+
+        .color-rgb {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: var(--symmetri-text-tertiary);
+        }
+
+        /* Typography */
+        .font-demo {
+            margin: 20px 0;
+            padding: 20px;
+            background: var(--symmetri-light-gray);
+            border-radius: 8px;
+        }
+
+        .font-name {
+            font-weight: bold;
+            color: var(--symmetri-red);
+            margin-bottom: 10px;
+        }
+
+        .font-example {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        /* Button Showcase */
+        .button-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        /* Component Showcase */
+        .component-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        /* Gradients */
+        .gradient-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .gradient-box {
+            height: 150px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: var(--symmetri-shadow-md);
+        }
+
+        /* Usage Examples */
+        .usage-example {
+            background: white;
+            border: 1px solid var(--symmetri-border-color);
+            border-radius: 8px;
+            padding: 30px;
+            margin: 20px 0;
+        }
+
+        .code-block {
+            background: var(--symmetri-black);
+            color: var(--symmetri-yellow);
+            padding: 20px;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin: 20px 0;
+        }
+
+        /* Section divider */
+        .section-divider {
+            height: 4px;
+            background: var(--symmetri-gradient-primary);
+            border-radius: 2px;
+            margin: 60px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Brand Introduction -->
+        <div class="brand-intro">
+            <h1>SYMMETRI</h1>
+            <p>
+                SYMMETRI EMBODIES MAVERICK ENERGY. BOLD, UNAPOLOGETIC, AND STRIKING LIKE A WHIRLWIND.
+                IT'S NOT JUST ABOUT PLAYING THE GAME - IT'S ABOUT CHANGING IT.
+            </p>
+        </div>
+
+        <!-- Primary Colors -->
+        <h2>Primary Brand Colors</h2>
+        <div class="color-grid">
+            <div class="color-swatch">
+                <div class="color-box bg-symmetri-red" style="color: white;">RED</div>
+                <div class="color-info">
+                    <div class="color-name">Red (Primary)</div>
+                    <div class="color-hex">#E1331A</div>
+                    <div class="color-rgb">rgb(225, 51, 26)</div>
+                </div>
+            </div>
+
+            <div class="color-swatch">
+                <div class="color-box bg-symmetri-magenta" style="color: white;">MAGENTA</div>
+                <div class="color-info">
+                    <div class="color-name">Magenta</div>
+                    <div class="color-hex">#E4002A</div>
+                    <div class="color-rgb">rgb(228, 0, 42)</div>
+                </div>
+            </div>
+
+            <div class="color-swatch">
+                <div class="color-box bg-symmetri-orange" style="color: white;">ORANGE</div>
+                <div class="color-info">
+                    <div class="color-name">Orange</div>
+                    <div class="color-hex">#F37920</div>
+                    <div class="color-rgb">rgb(243, 121, 32)</div>
+                </div>
+            </div>
+
+            <div class="color-swatch">
+                <div class="color-box bg-symmetri-yellow-warm" style="color: black;">YELLOW</div>
+                <div class="color-info">
+                    <div class="color-name">Yellow (Warm)</div>
+                    <div class="color-hex">#FFB200</div>
+                    <div class="color-rgb">rgb(255, 178, 0)</div>
+                </div>
+            </div>
+
+            <div class="color-swatch">
+                <div class="color-box bg-symmetri-yellow" style="color: black;">YELLOW</div>
+                <div class="color-info">
+                    <div class="color-name">Yellow (Primary)</div>
+                    <div class="color-hex">#FFB400</div>
+                    <div class="color-rgb">rgb(255, 180, 0)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Neutral Colors -->
+        <h2>Neutral Colors</h2>
+        <div class="color-grid">
+            <div class="color-swatch">
+                <div class="color-box bg-symmetri-black" style="color: white;">BLACK</div>
+                <div class="color-info">
+                    <div class="color-name">Black</div>
+                    <div class="color-hex">#000000</div>
+                    <div class="color-rgb">rgb(0, 0, 0)</div>
+                </div>
+            </div>
+
+            <div class="color-swatch">
+                <div class="color-box bg-symmetri-dark-gray" style="color: white;">DARK GRAY</div>
+                <div class="color-info">
+                    <div class="color-name">Dark Gray</div>
+                    <div class="color-hex">#6B6A6C</div>
+                    <div class="color-rgb">rgb(107, 106, 108)</div>
+                </div>
+            </div>
+
+            <div class="color-swatch">
+                <div class="color-box bg-symmetri-medium-gray" style="color: white;">MEDIUM GRAY</div>
+                <div class="color-info">
+                    <div class="color-name">Medium Gray</div>
+                    <div class="color-hex">#979797</div>
+                    <div class="color-rgb">rgb(151, 151, 151)</div>
+                </div>
+            </div>
+
+            <div class="color-swatch">
+                <div class="color-box bg-symmetri-light-gray" style="color: black;">LIGHT GRAY</div>
+                <div class="color-info">
+                    <div class="color-name">Light Gray</div>
+                    <div class="color-hex">#D8D9D7</div>
+                    <div class="color-rgb">rgb(216, 217, 215)</div>
+                </div>
+            </div>
+
+            <div class="color-swatch">
+                <div class="color-box bg-symmetri-white" style="color: black; border: 1px solid #ccc;">WHITE</div>
+                <div class="color-info">
+                    <div class="color-name">White</div>
+                    <div class="color-hex">#FFFFFF</div>
+                    <div class="color-rgb">rgb(255, 255, 255)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Gradients -->
+        <h2>Brand Gradients</h2>
+        <div class="gradient-showcase">
+            <div class="gradient-box bg-gradient-symmetri-primary">
+                Primary Gradient
+            </div>
+            <div class="gradient-box bg-gradient-symmetri-warm">
+                Warm Gradient
+            </div>
+            <div class="gradient-box bg-gradient-symmetri-bold">
+                Bold Gradient
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Typography -->
+        <h2>Typography</h2>
+        <p style="margin-bottom: 30px;">The Symmetri brand uses a carefully curated font system:</p>
+
+        <div class="font-demo">
+            <div class="font-name">GABRIEL SANS - BOLD / NORMAL</div>
+            <div class="font-example" style="font-weight: bold;">symmetri / SYMMETRI</div>
+        </div>
+
+        <div class="font-demo">
+            <div class="font-name">NEUE MONTREAL - BOLD</div>
+            <div class="font-example" style="font-weight: bold;">symmetri / SYMMETRI</div>
+        </div>
+
+        <div class="font-demo">
+            <div class="font-name">NOURD - BOLD / NORMAL / THIN</div>
+            <div class="font-example" style="font-weight: bold;">symmetri / SYMMETRI</div>
+        </div>
+
+        <div class="font-demo">
+            <div class="font-name">GORDITA - BOLD</div>
+            <div class="font-example" style="font-weight: bold;">symmetri / SYMMETRI</div>
+        </div>
+
+        <div class="font-demo">
+            <div class="font-name">RALEWAY - THIN</div>
+            <div class="font-example" style="font-weight: 300;">symmetri / SYMMETRI</div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Buttons -->
+        <h2>Button Components</h2>
+        <div class="button-grid">
+            <button class="btn-symmetri-primary">Primary Button</button>
+            <button class="btn-symmetri-secondary">Gradient Button</button>
+            <button class="btn-symmetri-outline">Outline Button</button>
+        </div>
+
+        <h3>Button Usage Code</h3>
+        <div class="code-block">
+&lt;button class="btn-symmetri-primary"&gt;Primary Button&lt;/button&gt;
+&lt;button class="btn-symmetri-secondary"&gt;Gradient Button&lt;/button&gt;
+&lt;button class="btn-symmetri-outline"&gt;Outline Button&lt;/button&gt;
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Cards -->
+        <h2>Card Components</h2>
+        <div class="component-grid">
+            <div class="card-symmetri">
+                <h3>Card Title</h3>
+                <p>This is a standard Symmetri card with hover effect. It features proper spacing, shadows, and transitions.</p>
+            </div>
+
+            <div class="card-symmetri">
+                <h3 class="text-symmetri-red">Branded Card</h3>
+                <p>You can combine cards with brand color utilities for emphasis and visual hierarchy.</p>
+            </div>
+
+            <div class="card-symmetri" style="border-top: 4px solid var(--symmetri-yellow);">
+                <h3>Accented Card</h3>
+                <p>Add colored accents to cards for additional visual interest and category differentiation.</p>
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Alerts -->
+        <h2>Alert Components</h2>
+        <div class="alert-symmetri alert-symmetri-error" style="margin: 20px 0;">
+            <strong>Error:</strong> This is an error alert using the brand red color.
+        </div>
+
+        <div class="alert-symmetri alert-symmetri-warning" style="margin: 20px 0;">
+            <strong>Warning:</strong> This is a warning alert using the brand yellow color.
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- CSS Variables -->
+        <h2>Using CSS Variables</h2>
+        <div class="usage-example">
+            <p>All brand colors are available as CSS custom properties (variables) that can be used throughout your stylesheets:</p>
+
+            <div class="code-block">
+/* Primary Colors */
+var(--symmetri-red)
+var(--symmetri-magenta)
+var(--symmetri-orange)
+var(--symmetri-yellow)
+var(--symmetri-yellow-warm)
+
+/* Neutral Colors */
+var(--symmetri-black)
+var(--symmetri-dark-gray)
+var(--symmetri-medium-gray)
+var(--symmetri-light-gray)
+var(--symmetri-white)
+
+/* Gradients */
+var(--symmetri-gradient-primary)
+var(--symmetri-gradient-warm)
+var(--symmetri-gradient-bold)
+            </div>
+
+            <h3>Example Usage:</h3>
+            <div class="code-block">
+.my-component {
+    background-color: var(--symmetri-red);
+    color: var(--symmetri-white);
+    border: 2px solid var(--symmetri-yellow);
+}
+
+.my-gradient-bg {
+    background: var(--symmetri-gradient-primary);
+}
+            </div>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <!-- Utility Classes -->
+        <h2>Utility Classes</h2>
+        <div class="usage-example">
+            <p>Quick utility classes for applying brand colors:</p>
+
+            <h3 style="margin-top: 30px;">Background Colors</h3>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0;">
+                <span class="bg-symmetri-red" style="padding: 10px 20px; color: white; border-radius: 4px;">.bg-symmetri-red</span>
+                <span class="bg-symmetri-yellow" style="padding: 10px 20px; color: black; border-radius: 4px;">.bg-symmetri-yellow</span>
+                <span class="bg-symmetri-black" style="padding: 10px 20px; color: white; border-radius: 4px;">.bg-symmetri-black</span>
+            </div>
+
+            <h3 style="margin-top: 30px;">Text Colors</h3>
+            <div style="margin: 20px 0;">
+                <p class="text-symmetri-red" style="font-size: 18px; font-weight: bold;">This text uses .text-symmetri-red</p>
+                <p class="text-symmetri-magenta" style="font-size: 18px; font-weight: bold;">This text uses .text-symmetri-magenta</p>
+                <p class="text-symmetri-yellow" style="font-size: 18px; font-weight: bold;">This text uses .text-symmetri-yellow</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--symmetri-border-color); text-align: center; color: var(--symmetri-text-secondary);">
+            <p><strong>SYMMETRI BRAND REFERENCE</strong></p>
+            <p>For complete brand guidelines, see <code>BRAND_GUIDE.md</code></p>
+            <p style="margin-top: 20px;">Last updated: November 2025</p>
+        </div>
+    </div>
+</body>
+</html>
