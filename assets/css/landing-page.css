@@ -932,14 +932,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#232526', end
 
 }
 .filter-gradient.blue:after{
-    background: rgba(54, 151, 142, 0.8) ; /* Old browsers */
-    background: -moz-radial-gradient(center, ellipse cover,  #1e5799 0%, rgba(54, 151, 142, 0.8)  0%, #0C526C 100%, #3d7eaa 100%, #182848 100%, #6e48aa 100%, #6e48aa 100%); /* FF3.6+ */
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#1e5799), color-stop(0%,rgba(54, 151, 142, 0.8) ), color-stop(100%,#0C526C), color-stop(100%,#3d7eaa), color-stop(100%,#182848), color-stop(100%,#6e48aa), color-stop(100%,#6e48aa)); /* Chrome,Safari4+ */
-    background: -webkit-radial-gradient(center, ellipse cover,  #1e5799 0%,rgba(54, 151, 142, 0.8)  0%,#0C526C 100%,#3d7eaa 100%,#182848 100%,#6e48aa 100%,#6e48aa 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-radial-gradient(center, ellipse cover,  #1e5799 0%,rgba(54, 151, 142, 0.8)  0%,#0C526C 100%,#3d7eaa 100%,#182848 100%,#6e48aa 100%,#6e48aa 100%); /* Opera 12+ */
-    background: -ms-radial-gradient(center, ellipse cover,  #1e5799 0%,rgba(54, 151, 142, 0.8)  0%,#0C526C 100%,#3d7eaa 100%,#182848 100%,#6e48aa 100%,#6e48aa 100%); /* IE10+ */
-    background: radial-gradient(ellipse at center,  #1e5799 0%,rgba(54, 151, 142, 0.8)  0%,#0C526C 100%,#3d7eaa 100%,#182848 100%,#6e48aa 100%,#6e48aa 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(54, 151, 142, 0.8) ', endColorstr='#6e48aa',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    /* GOODBYE BLOB! Hello modern animated SVG background */
+    background: none;
+    content: none;
 }
 .filter-gradient.green:after{
 /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -1692,5 +1687,322 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#de8e0009', e
 @media (min-width: 768px){
     .landing-page .navbar-top{
         padding-top: 10px;
+    }
+}
+
+/* ========================================
+   🚀 MODERN REDESIGN - SymmetriGrowth
+   ======================================== */
+
+/* Hero Section - Animated SVG Background */
+.landing-page .parallax.filter-gradient.blue {
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-page .parallax.filter-gradient.blue .parallax-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.landing-page .parallax.filter-gradient.blue .parallax-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../img/growth-pattern.svg') center center no-repeat;
+    background-size: cover;
+    z-index: 1;
+    animation: pulseGlow 15s ease-in-out infinite;
+}
+
+/* Glassmorphism overlay for depth */
+.landing-page .parallax.filter-gradient.blue .parallax-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    backdrop-filter: blur(0px);
+    z-index: 2;
+}
+
+/* Content area with glassmorphism */
+.landing-page .parallax .description {
+    position: relative;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    transform: translateY(0);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.landing-page .parallax .description:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.landing-page .parallax .description h2 {
+    background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-size: 48px;
+    text-shadow: none;
+    letter-spacing: -0.02em;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.landing-page .parallax .description h5 {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 300;
+    line-height: 1.8;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+/* Modern button styling */
+.landing-page .parallax .buttons {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.landing-page .parallax .buttons .btn {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50px;
+    padding: 14px 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.landing-page .parallax .buttons .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.landing-page .parallax .buttons .btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.landing-page .parallax .buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Floating animation for iPhone */
+.landing-page .parallax .parallax-image {
+    animation: float 6s ease-in-out infinite;
+    z-index: 10;
+    position: relative;
+}
+
+/* Card enhancements with modern gradients */
+.landing-page .section-features .card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.98) 100%);
+    border: none;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.landing-page .section-features .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    transform: scaleX(0);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.landing-page .section-features .card:hover::before {
+    transform: scaleX(1);
+}
+
+.landing-page .section-features .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+}
+
+.landing-page .section-features .card.card-blue .icon i {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.95;
+    }
+}
+
+/* Parallax background enhancement */
+.landing-page .parallax .parallax-background-image {
+    opacity: 0.3;
+    filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+/* Section header styling */
+.header-text {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.header-text::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+/* Modern color palette enhancements */
+.btn-info.btn-fill {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-info.btn-fill:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+/* Section backgrounds with subtle gradients */
+.section-gray {
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+/* Logo container branding update */
+.logo-container .brand {
+    background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Carousel indicators modern styling */
+.landing-page .carousel-indicators.carousel-indicators-blue .active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.landing-page .carousel-indicators.carousel-indicators-blue li {
+    border-color: #667eea;
+}
+
+/* CTA section info box */
+.landing-page .section-no-padding .parallax .info h1 {
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    font-weight: 300;
+    letter-spacing: -0.5px;
+}
+
+.landing-page .section-no-padding .parallax .info p {
+    font-size: 20px;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+/* Feature section icons with gradient */
+.landing-page .section-features .card .icon i {
+    transition: all 0.3s ease;
+}
+
+.landing-page .section-features .card:hover .icon i {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Navbar modern styling */
+.navbar-transparent {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+/* Footer link colors */
+.footer .copyright a {
+    color: #667eea;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.footer .copyright a:hover {
+    color: #764ba2;
+}
+
+/* Responsive enhancements */
+@media (max-width: 767px) {
+    .landing-page .parallax .description {
+        padding: 25px !important;
+        margin: 0 15px;
+    }
+
+    .landing-page .parallax .description h2 {
+        font-size: 32px;
+    }
+
+    .landing-page .parallax .parallax-image {
+        animation: none;
     }
 }
